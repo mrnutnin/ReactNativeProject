@@ -16,7 +16,7 @@ export default class Component1 extends Component {
       return (
         <View style={styles.container}>
   
-          <BlinkText message="Hello World" interval={100}/>
+          <BlinkText message="Hello World Form PC" interval={100}/>
   
         </View>
       );
