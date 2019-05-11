@@ -32,7 +32,7 @@ export default class Component1 extends Component {
   
     render() {
         return (
-            <Text style={styles.instructions}>Hello  {this.props.message}. {this.props.option}</Text>
+            <Text style={styles.instructions}>Hello World  {this.props.message}. {this.props.option}</Text>
         );
       }
   }
