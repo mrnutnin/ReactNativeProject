@@ -11,41 +11,17 @@ import {Platform, StyleSheet, Text, View} from 'react-native';
 
 
 
-export default class Component2 extends Component {
+export default class Component3 extends Component {
     render() {
       return (
         <View style={styles.container}>
-  
-          <BlinkText message="Hello World Form PC" interval={100}/>
-  
+          <Text style={{color: "#FF0000",fontSize: 30}}>Hello World!</Text>
         </View>
       );
     }
   }
-  
-  class BlinkText extends Component {
-  
-    constructor(props){
-      super(props)
-      this.state = {isVisible: true};
 
-      setInterval(() => {
-        this.setState(oldState=>{
-          return {isVisible: !oldState.isVisible}
-        })
-      }, this.props.interval);
-    }
   
-    render() {
-      let display = this.state.isVisible ? this.props.message : '';
-        return (
-            <Text style={styles.instructions}>
-              {display}
-            </Text>
-        );
-      }
-  }
-
   const styles = StyleSheet.create({
     container: {
       flex: 1,
@@ -66,3 +42,6 @@ export default class Component2 extends Component {
   });
   
   
+  
+
+
