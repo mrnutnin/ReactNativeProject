@@ -29,11 +29,18 @@ export default class Component10 extends Component {
     })
   }
 
+  clickMeWithBinding = ()=>{
+    this.setState(oldState=>{
+      return {active: !oldState.active}
+    })
+  }
+
   render() {
     return (
       <View style={{flex: 1, alignItems: "center", justifyContent: "center"}}>
         <Button title={this.state.active ? 'Active' : 'InActive'} onPress={this.clickMe} />
         <Button title={this.state.active ? 'Active' : 'InActive'} onPress={this.clickMeWithArrowFn} />
+        <Button title={this.state.active ? 'Active' : 'InActive'} onPress={this.clickMeWithBinding.bind(this)} />
       </View>
     );
   }
